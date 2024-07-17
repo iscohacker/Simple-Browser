@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
@@ -38,9 +39,13 @@ class DuckDuckGoActivity : AppCompatActivity() {
             }
         }
         binding.searchButton.setOnClickListener {
-            val sorov = binding.editText.text.toString()
-            val url = "https://duckduckgo.com/?t=h_&q= $sorov"
-            binding.webView.loadUrl(url)
+            if (binding.editText.text.isNotBlank()){
+                val sorov = binding.editText.text.toString()
+                val url = "https://yandex.uz/search/?text= $sorov"
+                binding.webView.loadUrl(url)
+            }else{
+                Toast.makeText(this, "Qidirishga hech narsa yo'q", Toast.LENGTH_SHORT).show()
+            }
         }
         binding.remove.setOnClickListener {
             binding.editText.setText("")
