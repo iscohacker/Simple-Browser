@@ -3,10 +3,12 @@ package com.example.simplebrowser
 import android.app.ProgressDialog
 import android.graphics.Bitmap
 import android.os.Bundle
+import android.view.View
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.widget.addTextChangedListener
 import com.example.simplebrowser.databinding.ActivityYandexBinding
 
 class YandexActivity : AppCompatActivity() {
@@ -42,6 +44,9 @@ class YandexActivity : AppCompatActivity() {
         }
         binding.remove.setOnClickListener {
          binding.editText.setText("")
+        }
+        binding.editText.addTextChangedListener {
+            binding.remove.visibility = if (it.toString().isNotEmpty()) View.VISIBLE else View.GONE
         }
     }
 }
