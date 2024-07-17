@@ -40,5 +40,8 @@ class YandexActivity : AppCompatActivity() {
             val url = "https://yandex.uz/search/?text= $sorov"
             binding.webView.loadUrl(url)
         }
+        binding.remove.setOnClickListener {
+         binding.editText.setText("")
+        }
     }
 }

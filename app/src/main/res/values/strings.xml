@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Simple Browser</string>
     <string name="selectt_browser">Qaysi brauzerdan foydalanishni hohlaysiz , iltimos tanlang</string>
+    <string name="search">Qidiruv so\'rovi</string>
 </resources>

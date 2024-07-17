@@ -40,5 +40,8 @@ class GoogleActivity : AppCompatActivity() {
             binding.webView.loadUrl(url)
         }
 
+        binding.remove.setOnClickListener {
+            binding.editText.setText("")
+        }
     }
 }

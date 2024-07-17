@@ -40,5 +40,8 @@ class DuckDuckGoActivity : AppCompatActivity() {
             val url = "https://duckduckgo.com/?t=h_&q= $sorov"
             binding.webView.loadUrl(url)
         }
+        binding.remove.setOnClickListener {
+            binding.editText.setText("")
+        }
     }
 }

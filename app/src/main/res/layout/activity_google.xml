@@ -13,14 +13,26 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
         android:background="#88B1D9"
-        android:hint="Qidiruv so'rovi"
+        android:hint="@string/search"
         android:padding="5dp"
+        android:inputType="textWebEditText"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/searchButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/remove"
+        android:layout_width="33dp"
+        android:layout_height="46dp"
+        android:src="@drawable/delet"
+        app:layout_constraintBottom_toTopOf="@id/webView"
+        app:layout_constraintHorizontal_bias="0.969"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/searchButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.468" />
 
     <ImageView
         android:id="@+id/searchButton"

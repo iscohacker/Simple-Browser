@@ -21,6 +21,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/remove"
+        android:layout_width="33dp"
+        android:layout_height="46dp"
+        android:src="@drawable/delet"
+        app:layout_constraintBottom_toTopOf="@id/webView"
+        app:layout_constraintHorizontal_bias="0.969"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/searchButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.701" />
+
 
     <ImageView
         android:id="@+id/searchButton"
