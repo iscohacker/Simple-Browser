@@ -51,6 +51,9 @@ class DuckDuckGoActivity : AppCompatActivity() {
             binding.editText.setText("")
         }
         binding.editText.addTextChangedListener {
+            val sorov = binding.editText.text.toString()
+            val url = "https://duckduckgo.com/?t=h_&q= $sorov"
+            binding.webView.loadUrl(url)
             binding.remove.visibility = if (it.toString().isNotEmpty()) View.VISIBLE else View.GONE
         }
     }

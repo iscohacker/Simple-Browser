@@ -51,6 +51,9 @@ class YandexActivity : AppCompatActivity() {
          binding.editText.setText("")
         }
         binding.editText.addTextChangedListener {
+            val sorov = binding.editText.text.toString()
+            val url = "https://yandex.uz/search/?text= $sorov"
+            binding.webView.loadUrl(url)
             binding.remove.visibility = if (it.toString().isNotEmpty()) View.VISIBLE else View.GONE
         }
     }

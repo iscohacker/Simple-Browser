@@ -51,6 +51,10 @@ class GoogleActivity : AppCompatActivity() {
             binding.editText.setText("")
         }
         binding.editText.addTextChangedListener {
+                val sorov = binding.editText.text.toString()
+                val url = "https://www.google.com/search?q= $sorov"
+                binding.webView.loadUrl(url)
+
             binding.remove.visibility = if (it.toString().isNotEmpty()) View.VISIBLE else View.GONE
         }
     }
