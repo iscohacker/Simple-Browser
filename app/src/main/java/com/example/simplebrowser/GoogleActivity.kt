@@ -40,7 +40,7 @@ class GoogleActivity : AppCompatActivity() {
         binding.searchButton.setOnClickListener {
             if (binding.editText.text.isNotBlank()){
                 val sorov = binding.editText.text.toString()
-                val url = "https://yandex.uz/search/?text= $sorov"
+                val url = "https://www.google.com/search?q= $sorov"
                 binding.webView.loadUrl(url)
             }else{
                 Toast.makeText(this, "Qidirishga hech narsa yo'q", Toast.LENGTH_SHORT).show()
